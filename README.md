@@ -24,11 +24,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly efficient over the two pooled VM's, in addition to restricting access to the network.
-- Load ballancing helps the pooled resources blance incoming data between the pooled servers as well as possibly preventing a DOS attack. 
+- Load balancing helps the pooled resources balance incoming data between the pooled servers as well as possibly preventing a DOS attack.  
 - The jumpbox allows access to the internal servers without exposing ports to the public network. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system metrics.
-- Filebeat watch filesystem logs for changes in files when they occure.
+
+- Filebeat watch filesystem logs for changes in files when they occur.
 - Metricbeat logs service statistics to a file you specify.
 
 The configuration details of each machine may be found below.
