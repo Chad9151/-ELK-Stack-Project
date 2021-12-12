@@ -46,7 +46,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump-Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- SSH to 40.155.12.10
+- Host Machine 69.62.147.71 with the matching encryption key
 
 Machines within the network can only be accessed by Jump-Box or other VM's inside the network.
 - Machine allowed to access the ELK-Stack is the Jump-box with IP 10.0.0.1 over SSH as well as Host IP address through HTTP port 5601
