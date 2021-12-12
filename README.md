@@ -89,9 +89,10 @@ We have installed the following Beats on these machines:
 * Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- Filebeat: Filebeat is designed to send log files you specify to Logstach for processing or into Elasticsearch for parcing. filebeat searches for log files in /var/log/apache2/*
+- Filebeat: Filebeat is designed to send log files you specify to Logstach for processing or into Elasticsearch for parsing. filebeat searches for log files in /var/log/apache2/*
 
-- Metricbeat: Metricbeat collects metrics and statistics from servers and system services running such as Apache, MySQL, System etc and forward them to Elasticsearch, Logstash or Kafka. most common metrics collected are CPU Usage, CPU Load Average, Memory Usage and System Uptime.
+- Metricbeat: Metricbeat collects metrics and statistics from servers and their services running  and forward them to Elasticsearch or any other location specified. 
+
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
