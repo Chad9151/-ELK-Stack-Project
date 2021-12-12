@@ -79,21 +79,27 @@ N/A
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+| Name     | Function         | IP Address   |
+|----------|------------------|--------------|
+| Web-1    | VM Server        | 10.0.0.11     |
+| Web-2    | VM Serve         | 10.0.0.12    |
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+* Filebeat
+* Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat: Filebeat is designed to send log files you specify to Logstach for processing or into Elasticsearch for parcing. filebeat searches for log files in /var/log/apache2/*
+
+- Metricbeat: Metricbeat collects metrics and statistics from servers and system services running such as Apache, MySQL, System etc and forward them to Elasticsearch, Logstash or Kafka. most common metrics collected are CPU Usage, CPU Load Average, Memory Usage and System Uptime.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat.yml file to /etc/ansible/files/.
+- Update the hosts file under [webservers] to include the Internal IP addresses of your webservers 
+- Run the playbook, and navigate to Kibana http://[Elk IP address]5601/app/kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
